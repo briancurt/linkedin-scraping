@@ -9,7 +9,7 @@ def main():
 	company = str(sys.argv[2]).lower()	# Company name
 
 	http = urllib3.PoolManager()
-	headers = urllib3.util.make_headers(user_agent='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.101 Safari/537.36')	# By pass LinkedIn's 999 response code, also force desktop site version
+	headers = urllib3.util.make_headers(user_agent='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.101 Safari/537.36')	# Bypass LinkedIn's 999 response code, also force desktop site version
 
 	r = http.request('GET', profile, headers=headers)	# Get the HTML
 
